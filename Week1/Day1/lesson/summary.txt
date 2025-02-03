@@ -1,0 +1,6 @@
+define the following value types:
+
+strings: Represents an objects of text wrapped with double or single quoatation marks. An imutable sequence of chars.
+integers: Represents whole numbers objects.
+floats: Represents a decimal numbers objects.
+booleans: Represents an object that shows True or False values.

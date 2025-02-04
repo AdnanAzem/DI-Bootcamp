@@ -71,10 +71,17 @@ float is a decimal numbers
 the difference is that the integers is Represents whole numbers (positive, negative, or zero) without fractional parts
 but float Represents real numbers with fractional parts
 '''
-numbers = [1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
-# yea we can use tuple or set to generate a sequence of floats
-numbers_tuple = (1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)
-numbers_set = (1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)
+numbers = []
+for i in range(6):
+    numbers.append(i)
+    numbers.append(i+0.5)
+
+print(numbers)
+
+# numbers = [1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
+# # yea we can use tuple or set to generate a sequence of floats
+# numbers_tuple = (1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)
+# numbers_set = (1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)
 
 
 # Exercise 5: For Loop
@@ -85,8 +92,8 @@ numbers_set = (1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)
 for num in range(1,21):
     print(num)
 
-for num in range(1,21):
-    if num % 2 == 0:
+for i,num in enumerate(range(1,21)):
+    if i % 2 == 0:
         print(num)
 
 

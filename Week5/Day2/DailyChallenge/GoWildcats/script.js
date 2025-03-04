@@ -1,3 +1,5 @@
+// Daily challenge: Go Wildcats
+
 const gameInfo = [
     {
       username: "john",

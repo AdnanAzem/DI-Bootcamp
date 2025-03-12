@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy Random GIF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Giphy Random GIF</h1>
+    <form id="gif-form">
+        <label for="category">Search for a GIF category:</label>
+        <input type="text" id="category" placeholder="e.g., sun" required>
+        <button type="submit">Fetch GIF</button>
+    </form>
+
+    <div class="gif-container" id="gif-container"></div>
+    <button class="delete-all-btn" id="delete-all-btn">Delete All GIFs</button>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.gif-container{
+    margin-top: 20px;
+}
+
+.gif-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gif-item img{
+    max-width: 200px;
+    margin-right: 10px;
+}
+
+.delete-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-all-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}

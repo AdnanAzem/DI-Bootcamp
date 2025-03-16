@@ -1,0 +1,2 @@
+This is the content of source.txt.
+It will be copied to destination.txt.

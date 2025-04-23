@@ -1,0 +1,66 @@
+/* src/components/UserList.module.css */
+.user-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-list h2 {
+  text-align: center;
+  color: #2893ff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.user-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.user-card h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.user-card p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.user-card strong {
+  color: #333;
+}
+
+.catchphrase {
+  font-style: italic;
+  color: #7f8c8d !important;
+  margin-top: 1rem !important;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #3498db;
+  padding: 2rem;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  padding: 2rem;
+}

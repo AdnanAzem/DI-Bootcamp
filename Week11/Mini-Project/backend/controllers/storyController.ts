@@ -6,7 +6,9 @@ import {
   updateStory,
   deleteStory,
   isContributor,
+  getStoriesByUser,
 } from "../models/storyModel";
+import { log } from "console";
 
 export const fetchStories = async (req: Request, res: Response) => {
   try {
@@ -89,4 +91,14 @@ export const removeStory = async (req: any, res: Response) => {
   } catch {
     res.status(500).json({ message: "Failed to delete story." });
   }
+};
+
+export const getMyStories = async (req: any, res: Response) => {
+    try {
+      const userId = req.user.userId;
+      const stories = await getStoriesByUser(userId);
+      res.json(stories);
+    } catch (error) {
+      res.status(500).json({ message: 'Server error' });
+    }
 };

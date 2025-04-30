@@ -53,7 +53,8 @@ export const login = async (req: Request, res: Response) => {
 
     res.cookie('accessToken', accessToken, { httpOnly: true, maxAge: 900000 }); 
     res.cookie("refreshToken", refreshToken, { httpOnly: true, maxAge: 604800000 });
-    res.json({ accessToken });
+    res.cookie("user", { userId: user.id, email: user.email, username: user.username }, { httpOnly: true, maxAge: 604800000 });
+    res.json({ accessToken ,refreshToken, user:{ userId: user.id, email: user.email, username: user.username }});
     return;
   } catch (err) {
     res.status(500).json({ message: "Server error." });
@@ -66,6 +67,17 @@ export const logout = (req: Request, res: Response) => {
   req.cookies.refreshToken = null;
   delete req.cookies.refreshToken;
   res.sendStatus(200);
+}
+
+export const getUsers = async (req: Request, res: Response) => {
+  try {
+    const users = await authModel.getAllUsers();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: "Server error." });
+    return;
+  }
+
 }
 
 export const refreshToken = (req: Request, res: Response) => {
@@ -88,3 +100,5 @@ export const refreshToken = (req: Request, res: Response) => {
     res.json({ accessToken: newAccessToken });
   });
 };
+
+
